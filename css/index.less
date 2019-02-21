@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+}
+
+img {
+  display: block;
+}
+
+/*禁止系统滚动条*/
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+@rem: 23.4375rem;
+
+//模拟屏幕区
+#wrap {
+  width: 100%;
+  height: 100%;
+  //background: grey;
+  //头部
+  #header {
+    .headerTop {
+      width: 100%;
+      height: 44/@rem;
+      //background: deepskyblue;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .city {
+        width: 51/@rem;
+        font-family: PingFangSC-Regular;
+        font-size: 12px;
+        color: #666666;
+        letter-spacing: 0;
+        background-image: url("../img/Triangle.png");
+        background-repeat: no-repeat;
+        background-size: 7/@rem 4/@rem;
+        background-position: 29/@rem 6/@rem;
+      }
+      h2 {
+        height: 44/@rem;
+        line-height: 44/@rem;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #333333;
+        letter-spacing: 0;
+        margin: 0 50/@rem;
+      }
+      .shaixuan {
+        width: 18.1/@rem;
+        height: 17/@rem;
+        background-image: url("../img/nav_filter.png");
+        background-repeat: no-repeat;
+        background-size: 18.1/@rem 17/@rem;
+      }
+    }
+    .headerCenter {
+      img {
+        height: 94/@rem;
+      }
+    }
+    .headerBottom {
+      position: relative;
+      width: 100%;
+      height: 44/@rem;
+      //background: deepskyblue;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      a {
+        font-family: PingFangSC-Regular;
+        font-size: 16px;
+        color: #38404D;
+        letter-spacing: 0;
+        &:nth-child(2) {
+          color: #999;
+        }
+      }
+      .xiaBiao {
+        width: 20/@rem;
+        height: 2/@rem;
+        background: #262A32;
+        position: absolute;
+        left: 25%;
+        bottom: 0;
+        margin-left: -10/@rem;
+      }
+    }
+  }
+
+  //电影
+  #list {
+    &:before{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 10/@rem;
+      background:rgb(245,245,245);
+    }
+    li {
+      .movTop {
+        overflow: hidden;
+        img{
+          float: left;
+          margin-left: 15/@rem;
+          margin-top: 15/@rem;
+          width: 68/@rem;
+          height:90/@rem;
+        }
+        .movPoster{
+          position: relative;
+          float: left;
+          margin-left: 10/@rem;
+          margin-top: 15/@rem;
+          .movH3{
+            display: flex;
+            h3{
+              font-family: PingFangSC-Regular;
+              font-size: 15px;
+              color: #333333;
+              letter-spacing: 0;
+              white-space:nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            .imax{
+              margin-left: 5/@rem;
+              margin-right: 10/@rem;
+              margin-top: 2/@rem;
+              width: 42/@rem;
+              height: 14/@rem;
+              line-height: 14/@rem;
+              border: 1px solid #666;
+              border-radius: 18px;
+              font-size: 12/@rem;
+              text-align: center;
+              color: #666;
+            }
+            .money{
+              p{
+                &:nth-child(1){
+                  float: left;
+                  font-family: PingFangSC-Regular;
+                  font-size: 15px;
+                  color: #FF5200;
+                  letter-spacing: 0;
+                }
+                &:nth-child(2){
+                  float: left;
+                  font-family: PingFangSC-Regular;
+                  font-size: 12px;
+                  color:#FF5200;
+                  letter-spacing: 0;
+                  line-height: 21px;
+                }
+              }
+            }
+          }
+          .yanyuan{
+            p{
+              font-family: PingFangSC-Regular;
+              font-size: 12px;
+              color: #999999;
+              letter-spacing: 0;
+            }
+          }
+          .liangdian{
+            height: 15/@rem;
+            line-height: 15/@rem;
+            span{
+              float: left;
+              border-radius: 2/@rem;
+              font-size: 10/@rem;
+              margin-right: 5/@rem;
+              margin-top: 4/@rem;
+
+              &:nth-child(1){
+                border: 1px solid #FF4E4E;
+                color:#FF4E4E;
+              }
+              &:nth-child(2){
+                border: 1px solid #FF8500;
+                color:#FF8500;
+              }
+              &:nth-child(3){
+                border: 1px solid #BC75F3;
+                color:#BC75F3;
+              }
+              &:nth-child(4){
+                border: 1px solid #6CC531;
+                color:#6CC531;
+              }
+            }
+          }
+          .goupiao{
+            background-image: linear-gradient(90deg, #FF7530 0%, #FF5200 100%);
+            box-shadow: 0 2/@rem 6/@rem 0 #F4BEA4;
+            border-radius: 61/@rem;
+            width: 60/@rem;
+            height: 26/@rem;
+            line-height: 26/@rem;
+            ont-family: PingFangSC-Regular;
+            font-size: 14/@rem;
+            color: #fff;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+          }
+        }
+      }
+      .fenjiexian{
+        width: 287/@rem;
+        height: 1/@rem;
+        background: #F5F5F5;
+        margin-left: 88/@rem;
+        margin-top: 10/@rem;
+      }
+
+      //播放时间
+      .movTime{
+        margin-top: 10/@rem;
+        margin-bottom: 12/@rem;
+        overflow: hidden;
+        //background: deepskyblue;
+        h4{
+          width: 52/@rem;
+          height: 18/@rem;
+          float: left;
+          font-family: PingFangSC-Regular;
+          font-size: 13px;
+          color: #333333;
+          letter-spacing: 0;
+          margin-left: 15/@rem;
+        }
+        .showTime{
+          float: left;
+          width: 210/@rem;
+          margin-left: 20/@rem;
+          .time1{
+            display: flex;
+            justify-content: space-between;
+            span{
+              font-family: PingFangSC-Regular;
+              font-size: 13px;
+              color: #999999;
+              letter-spacing: 0;
+            }
+          }
+          .time2{
+            display: flex;
+            justify-content: space-between;
+            span{
+              font-family: PingFangSC-Regular;
+              font-size: 13px;
+              color: #999999;
+              letter-spacing: 0;
+            }
+          }
+          }
+        a{
+          width: 27/@rem;
+          height: 18/@rem;
+          float: right;
+          font-family: PingFangSC-Regular;
+          font-size: 13px;
+          color: #FF801A;
+          letter-spacing: 0;
+          margin-right: 15/@rem;
+        }
+      }
+      .liFenjiexian{
+        width: 100%;
+        height: 1/@rem;
+        background: #F0F0F0;
+      }
+    }
+  }
+
+  //地址
+  #dizhi{
+    &:before{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 10/@rem;
+      background:rgb(245,245,245);
+    }
+    width: 375/@rem;
+    height: 90/@rem;
+    img{
+      float: left;
+      width: 40/@rem;
+      height: 40/@rem;
+      margin-left: 15/@rem;
+      margin-top: 10/@rem;
+    }
+    .dizhiCall{
+      float: left;
+      margin-left: 10/@rem;
+      margin-top: 10/@rem;
+      h3{
+        font-family: PingFangSC-Regular;
+        height: 22/@rem;
+        font-size: 16px;
+        color: #333333;
+        letter-spacing: 0;
+        margin-bottom: 8/@rem;
+      }
+      p{
+        font-family: PingFangSC-Regular;
+        font-size: 12px;
+        color: #666666;
+        letter-spacing: 0;
+        margin-bottom: 6/@rem;
+      }
+    }
+  }
+
+  //底部
+  #footer{
+    &:before{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 10/@rem;
+      background:rgb(245,245,245);
+    }
+    width: 100%;
+    height: 49/@rem;
+    display: flex;
+    justify-content: space-around;
+    a{
+      width: 25/@rem;
+      height: 25/@rem;
+      font-family: PingFangSC-Regular;
+      font-size: 12px;
+      color: #FF5200;
+      letter-spacing: 0;
+      margin-top: 15/@rem;
+    }
+  }
+}
+

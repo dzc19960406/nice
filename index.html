@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<!--模拟屏幕区域-->
+<div id="wrap">
+    <!--头部-->
+    <header id="header">
+        <!--头部上-->
+        <div class="headerTop">
+            <div class="city">
+                广州
+            </div>
+            <h2>星光大道测试影院</h2>
+            <div class="shaixuan"></div>
+        </div>
+        <!--头部中-->
+        <div class="headerCenter">
+            <img src="img/banner.png" alt="">
+        </div>
+        <!--头部下-->
+        <div class="headerBottom">
+            <a href="javascript:;">正在热映</a>
+            <a href="javascript:;">即将上映</a>
+            <span class="xiaBiao"></span>
+
+        </div>
+
+    </header>
+
+    <!--电影-->
+    <ul id="list">
+        <li>
+            <div class="movTop">
+                <img src="img/pic1.png">
+                <div class="movPoster">
+                    <div class="movH3">
+                        <h3>加勒比海盗5:死无对证...</h3>
+                        <div class="imax">IMAX</div>
+                        <div class="money">
+                            <p>¥10.</p>
+                            <p>0起</p>
+                        </div>
+                    </div>
+                    <div class="yanyuan">
+                        <p>导演：乔阿吉姆</p>
+                        <p>主演：约翰尼</p>
+                        <p>120分钟/英语</p>
+                    </div>
+                    <div class="liangdian">
+                        <span>首映</span>
+                        <span>特惠</span>
+                        <span>明星</span>
+                        <span>点映</span>
+                    </div>
+                    <div class="goupiao">
+                        购票
+                    </div>
+                </div>
+            </div>
+            <!--分界线-->
+            <div class="fenjiexian"></div>
+
+            <!--播放时间-->
+            <div class="movTime">
+                <h4>今日排期</h4>
+                <div class="showTime">
+                    <div class="time1">
+                        <span>00:00</span>
+                        <span>00:00</span>
+                        <span>00:00</span>
+                        <span>00:00</span>
+                    </div>
+                    <div class="time2">
+                        <span>00:00</span>
+                        <span>00:00</span>
+                        <span>00:00</span>
+                        <span>00:00</span>
+
+                    </div>
+                </div>
+                <a href="javascript:;">收起</a>
+            </div>
+
+            <!--li的分界线-->
+            <div class="liFenjiexian"></div>
+        </li>
+        <li>
+            <div class="movTop">
+                <img src="img/pic1.png">
+                <div class="movPoster">
+                    <div class="movH3">
+                        <h3>加勒比海盗5:死无对证...</h3>
+                        <div class="imax">IMAX</div>
+                        <div class="money">
+                            <p>¥10.</p>
+                            <p>0起</p>
+                        </div>
+                    </div>
+                    <div class="yanyuan">
+                        <p>导演：乔阿吉姆</p>
+                        <p>主演：约翰尼</p>
+                        <p>120分钟/英语</p>
+                    </div>
+                    <div class="liangdian">
+                        <span>首映</span>
+                        <span>特惠</span>
+                        <span>明星</span>
+                        <span>点映</span>
+                    </div>
+                    <div class="goupiao">
+                        购票
+                    </div>
+                </div>
+            </div>
+            <!--分界线-->
+            <div class="fenjiexian"></div>
+
+            <!--播放时间-->
+            <div class="movTime">
+                <h4>今日排期</h4>
+                <div class="showTime">
+                    <div class="time1">
+                        <span>00:00</span>
+                        <span>00:00</span>
+                        <span>00:00</span>
+                        <span>00:00</span>
+                    </div>
+                    <div class="time2">
+                    </div>
+                </div>
+                <a href="javascript:;">展开</a>
+            </div>
+
+        </li>
+    </ul>
+
+    <!--地址-->
+    <div id="dizhi">
+        <img src="img/star.png" alt="">
+        <div class="dizhiCall">
+            <h3>星光大道影院</h3>
+            <p>广州市白云区大龙街道彭东大街星光大道广场12楼</p>
+            <p>020-81562222</p>
+        </div>
+    </div>
+
+    <!--底部-->
+    <footer id="footer">
+        <a href="javascript:;">购票</a>
+        <a href="javascript:;">商城</a>
+        <a href="javascript:;">活动</a>
+        <a href="javascript:;">我的</a>
+    </footer>
+</div>
+</body>
+<script type="text/javascript">
+    //禁止浏览器默认行为
+    document.addEventListener('touchstart', function (event) {
+        event.preventDefault();
+    });
+
+    //点透
+    (function () {
+        var aNodes = document.querySelectorAll('a');
+        for (var i = 0; i < aNodes.length; i++) {
+            aNodes[i].addEventListener('touchstart', function () {
+                window.location.href = this.href;
+            });
+        }
+        ;
+    })();
+
+    //rem适配
+    (function () {
+        var width = document.documentElement.clientWidth;
+        var styleNode = document.createElement('style');
+        styleNode.innerHTML = 'html{font-size: ' + width / 16 + 'px !important;}';
+        document.head.appendChild(styleNode);
+    })();
+
+
+</script>
+</html>
